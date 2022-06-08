@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+      marginTop : "15px",
+      marginBottom : "15px",
     },
     eventPicture: {
       width: 305,
