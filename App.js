@@ -10,6 +10,7 @@ import Event from './app_componets/events';
   return (
     <View style={styles.container}>
       <NavBar/>
+      {/* EVENTS */}
       {
         events.map(event =><Event/>)
       }
