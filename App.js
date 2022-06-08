@@ -1,14 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import {useState} from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import NavBar from './app_componets/nav';
+import Event from './app_componets/events';
 
-export default function App() {
+ const App = () =>{
+  const [events, setEvents] = useState([1,2,3,4,5,6])
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <NavBar/>
+      {
+        events.map(event =><Event/>)
+      }
     </View>
   );
 }
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
@@ -16,5 +25,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
